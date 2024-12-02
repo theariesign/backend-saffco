@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Admin Panel</h1>
+      <nav>
+        <button id="articles-tab">Kelola Artikel</button>
+        <button id="products-tab">Kelola Produk</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Articles Management -->
+      <section id="articles-section" class="hidden">
+        <h2>Articles</h2>
+        <form id="article-form">
+          <input type="text" id="article-title" placeholder="Title" required />
+          <textarea
+            id="article-content"
+            placeholder="Content"
+            required
+          ></textarea>
+          <input type="text" id="article-image" placeholder="Image URL" />
+          <button type="submit">Tambah Artikel</button>
+        </form>
+        <ul id="articles-list"></ul>
+      </section>
+
+      <!-- Products Management -->
+      <section id="products-section" class="hidden">
+        <h2>Products</h2>
+        <form id="product-form">
+          <input
+            type="text"
+            id="product-name"
+            placeholder="Product Name"
+            required
+          />
+          <input type="text" id="product-image" placeholder="Image URL" />
+          <textarea
+            id="product-description"
+            placeholder="Description"
+          ></textarea>
+          <input
+            type="number"
+            id="product-price"
+            placeholder="Price"
+            required
+          />
+          <button type="submit">Tambah Produk</button>
+        </form>
+        <ul id="products-list"></ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
